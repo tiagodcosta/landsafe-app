@@ -12,5 +12,5 @@ export const Main = (props) =>
 		<div className="content-container">
 			{props.children}
 		</div>
-	<Footer />	
+		<Footer />	
 	</div>

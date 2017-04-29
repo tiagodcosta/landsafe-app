@@ -1,0 +1,28 @@
+@media screen and (max-width: 720px) {
+	.content-container {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	.header {
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.nav-list {
+		width: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.nav-list__item {
+		margin: 0.31em 0;
+	}
+	.button-container {
+		width: 80%;
+	}
+	.search-container {
+		width: 100%;
+	}
+	.gauge-container {
+		width: 100%;
+	}
+}
