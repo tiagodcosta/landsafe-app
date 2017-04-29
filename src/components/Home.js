@@ -7,9 +7,9 @@ import '../scss/index.scss'
 export const Home = (props) =>
 	<div className="home-container">
 			<SearchBox />
-		<div className="gauge-container">
-			<Gauge value={0.2} width={350} height={320} label="How is the risk here?" />
-		</div>
+			<div className="gauge-container">
+				<Gauge value={40} width={350} height={320} color="#123456" label="How is the risk here?" />
+			</div>
 			<ButtonContainer />
 	</div>
 	

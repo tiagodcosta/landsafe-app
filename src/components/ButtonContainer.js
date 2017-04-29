@@ -16,9 +16,9 @@ export class Link extends React.Component {
 
 export const ButtonContainer = () =>
 		<div className="button-container">
-		<Link href={'/details'}>
+		<a href={'http://52.39.132.128:8082'}>
 			<button className="button-home">Check details</button>
-		</Link>
+		</a>
 		<Link href={'/alert'}>			
 			<button className="button-home button-home--alert">Alert friends</button>
 		</Link>	

@@ -5,16 +5,23 @@
 	}
 	.header {
 		flex-direction: column;
-		justify-content: space-between;
+		text-align: center;
 	}
 	.nav-list {
 		width: 100%;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		padding: 0;
 	}
 	.nav-list__item {
+		width: 100%;
 		margin: 0.31em 0;
+		padding: 0.31em;
+		cursor: pointer; 
+	}
+	.nav-list__item:hover {
+		background-color: #2980b9;
 	}
 	.button-container {
 		width: 80%;

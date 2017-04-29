@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+
 
 * {
 	padding: 0;
@@ -69,13 +71,33 @@ body {
 	color: #fff;
 	padding: 1em;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+.header__logo {
+	font-size: 2.3em;
+	font-family: 'Londrina Solid', Verdana, sans-serif;
+}
+.header__logo-link {
+	text-decoration: none;
+	color: #fff;
+}
+.header__logo-link:hover {
+	color: #fff;
 }
 .nav-list {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
-	width: 25%;
+	width: 20%;
+}
+.nav-list__link {
+	text-decoration: none;
+	color: #fff;
+}
+.nav-list__link:hover {
+	color: #000;
 }
 .gauge-container {
 	width: 30%;
