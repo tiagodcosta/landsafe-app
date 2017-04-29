@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', Arial, sans-serif;
 }
 .main-container {
 	width: 100%;
@@ -14,6 +19,26 @@
 	margin: 0 auto;
 	justify-content: space-between;
 	width: 40%;
+}
+.footer-container {
+	width: 100%;
+	padding: 4em 0 2em 0;
+	text-align: center;
+}
+.footer-container__text {
+	font-size: 1em;
+}
+.search-container {
+	width: 30%;
+	margin: 6em auto 0 auto;
+	display: flex;
+}
+.search-field {
+	padding: 0.31em;
+	flex: 1;
+}
+.search-button {
+	padding: 0.31em;
 }
 .button-home {
 	background: #2ecc71;
@@ -43,10 +68,10 @@
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
-	width: 20%;
+	width: 25%;
 }
 .gauge-container {
-	width: 50%;
-	margin: 10em auto 0 auto;
+	width: 30%;
+	margin: 3em auto 0 auto;
 }
 
