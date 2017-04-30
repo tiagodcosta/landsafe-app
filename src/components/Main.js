@@ -1,35 +1,28 @@
 import React from 'react'
 import { Navbar } from './Navbar'
 import { Footer } from './Footer'
-import { geolocated } from 'react-geolocated';
+import { Home } from './Home'
+import { AlertContainer } from './Alert'
+import { Details } from './Details'
 import '../scss/index.scss'
 
-export const Main = (props) =>
-	<div className="main-container">
-	<Geolocation />
-	<Navbar />
-		<div className="content-container">
-			{props.children}
-		</div>
-		<Footer />	
-	</div>
-
-
-
-export class Geolocation extends React.Component {
+export class Main extends React.Component {
   render() {
-  	console.log(this.props.coords)
-    return (
-    		<div>
-    			{this.props.coords}
-    		</div>
-    	)
-  }
+    return(
+        	 <div className="main-container">
+          	 <Navbar />
+        		    <div className="content-container">
+        			     {(this.props.location.pathname === "/") ? 
+                      <Home /> :
+                    (this.props.location.pathname === "/alert") ?  
+                      <AlertContainer /> :
+                      <Details />
+                    }
+        		    </div>
+        		  <Footer />
+        	 </div>
+      )
+    }
 }
 
-export default geolocated({
-  positionOptions: {
-    enableHighAccuracy: false,
-  },
-  userDecisionTimeout: 5000
-})(Geolocation);	
+
