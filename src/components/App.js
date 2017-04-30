@@ -17,7 +17,7 @@ export class App extends React.Component {
                       <Home /> :
                     (this.props.location.pathname === "/alert") ?  
                       <AlertContainer /> :
-                      <Error404 />
+                      <Details />
                     }
         		    </div>
         		  <Footer />

@@ -11,7 +11,6 @@ render (
 		<Route path="/" component={App} />
 		<Route path="alert" component={App} />
 		<Route path="details" component={App} />
-		<Route path="*" component={Error404} />
 	</Router>,
 	document.getElementById('main-app')
 )
