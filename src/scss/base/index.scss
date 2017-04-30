@@ -40,14 +40,10 @@ body {
 .search-container {
 	width: 30%;
 	margin: 6em auto 0 auto;
-	display: flex;
 }
 .search-field {
 	padding: 0.31em;
-	flex: 1;
-}
-.search-button {
-	padding: 0.31em;
+	border: 1px solid #95a5a6;
 }
 .button-home {
 	background: #2ecc71;
