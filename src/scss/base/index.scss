@@ -41,6 +41,16 @@ body {
 	width: 30%;
 	margin: 6em auto 0 auto;
 }
+.search-container__text {
+	display: block;
+	text-align: center;
+	width: 100%;
+	margin: 0.31em;
+}
+.search-container__select {
+	width: 100%;
+}
+
 .search-field {
 	padding: 0.31em;
 	border: 1px solid #95a5a6;

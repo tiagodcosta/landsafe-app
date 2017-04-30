@@ -1,15 +1,39 @@
 import React from 'react'
-import Autocomplete from 'react-google-autocomplete'
  
+export class SearchBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: 'london'};
 
-export const SearchBox = () =>
-		<div className="search-container">
-			<Autocomplete placeholder={'Enter a city'} className="search-field"
-			    style={{width: '100%'}}
-			    onPlaceSelected={(place) => {			      
-			    	console.log(place);
-			    }}
-			    types={['(regions)']}
-			    componentRestrictions={{country: "US"}}
-			/>
-		</div>
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('Your location is ' + this.state.value)
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+    <div className="search-container">	
+	      <form onSubmit={this.handleSubmit}>
+	        <label>
+	          Pick up a city
+	          <select value={this.state.value} onChange={this.handleChange}>
+	            <option value="riodejaneiro">Rio de Janeiro</option>
+	            <option value="london">London</option>
+	            <option value="Blue Hills">Blue Hills</option>
+	            <option value="cambridge">Cambridge</option>
+	          </select>
+	        </label>
+	        <input type="submit" value="Check" />
+	      </form>
+    </div>  
+    );
+  }
+}

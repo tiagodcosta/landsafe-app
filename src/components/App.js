@@ -4,9 +4,10 @@ import { Footer } from './Footer'
 import { Home } from './Home'
 import { AlertContainer } from './Alert'
 import { Details } from './Details'
+import { Error404 } from './Error404'
 import '../scss/index.scss'
 
-export class Main extends React.Component {
+export class App extends React.Component {
   render() {
     return(
         	 <div className="main-container">
@@ -16,7 +17,7 @@ export class Main extends React.Component {
                       <Home /> :
                     (this.props.location.pathname === "/alert") ?  
                       <AlertContainer /> :
-                      <Details />
+                      <Error404 />
                     }
         		    </div>
         		  <Footer />

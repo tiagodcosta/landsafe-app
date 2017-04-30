@@ -5,7 +5,7 @@ module.exports = {
 	output: {
 		path: "dist/assets/",
 		filename: "bundle.js",
-		publicPath: "/assets/"
+		publicPath: "assets/"
 	},
 	devServer: {
 		inline: true,
@@ -21,7 +21,7 @@ module.exports = {
 	}),
 	new webpack.optimize.UglifyJsPlugin({
 		compress: {
-        	warnings: true
+        	warnings: false
     	}
 	})
     ],

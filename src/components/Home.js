@@ -1,41 +1,47 @@
 import React, { Component } from 'react';
 import Gauge from 'react-svg-gauge';
 import { ButtonContainer } from './ButtonContainer'
-import { SearchBox } from './SearchBox'
+import { Geolocation } from './Geolocation'
 import '../scss/index.scss'
 
 export class Home extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			risk: 30
+			risk: 0,
 		}
+		this.handleChange = this.handleChange.bind(this);
+    	this.handleSubmit = this.handleSubmit.bind(this);
 	}
-	highRisk() {
-		this.setState({
-			risk: 80
-		})
-	}
-	lowRisk() {
-		this.setState({
-			risk: 10
-		})
-	}
-	mediumRisk() {
-		this.setState({
-			risk: 40
-		})
-	}
+	handleChange(event) {
+    	this.setState({risk: event.target.value});
+  	}
+  	handleSubmit(event) {
+    	console.log('Your risk is ' + this.state.risk)
+    	event.preventDefault();
+  	}
 	render() {
 		return (
 		<div className="home-container">
-			<SearchBox />
+		<Geolocation />
+			<div className="search-container">
+		       <form onSubmit={this.handleSubmit}>
+		        <label>
+		          <p className="search-container__text">Pick up a location</p>
+		          <select className="search-container__select" value={this.state.risk} onChange={this.handleChange}>
+		            <option value="50">Nova Friburgo</option>
+		            <option value="10">Blue Hills</option>
+		            <option value="80">Tura</option>
+		            <option value="10">Albany County Rail Trail</option>
+		            <option value="50">San Francisco</option>
+		            <option value="10">Kentucky</option>
+		          </select>
+		        </label>
+		      </form>
+			</div>
 			<div className="gauge-container">
 				<Gauge value={this.state.risk} width={350} height={320} color="#123456" label="How is the risk here?" />
 			</div>
-				<button onClick={this.lowRisk.bind(this)}>low</button>
-				<button onClick={this.mediumRisk.bind(this)}>Medium</button>
-				<button onClick={this.highRisk.bind(this)}>High</button>
 			<ButtonContainer />
 		</div>
 		)
