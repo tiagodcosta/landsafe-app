@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Alert from 'react-s-alert'
+import Alert  from 'react-s-alert'
 import 'react-s-alert/dist/s-alert-default.css'
 
 // optional - you can choose the effect you want
@@ -17,13 +17,16 @@ export class AlertContainer extends Component {
         e.preventDefault();
         Alert.warning('Test message warning!', {
             position: 'top-right'
-        })
+        });
+        console.log('clicked')
     }    
     render() {
     	return (
 		<div>
 			This Alert page
+        <div>
                <button onClick={this.handleClick}>ALERT!!!</button>
+        </div>       
 		</div>
 		)
 	}
